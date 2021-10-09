@@ -1,0 +1,54 @@
+/*VARIABLES*/
+:root{
+    --headingsFont: 'M PLUS Rounded 1c', sans-serif;
+    --parragraphsFont: 'Roboto Condensed', sans-serif;
+    --firstColor: #000;
+    --secondColor: #fff;
+    --thirdColor: #333333;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--parragraphsFont);
+    font-size: 2rem;
+}
+
+/*GLOBALS*/
+
+h1,h2,h3{
+    font-family: var(--headingsFont);
+    text-align: center;
+}
+
+p{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.btn{
+    text-decoration: none;
+    outline: none;
+    padding: 15px 30px;
+    background: var(--firstColor);
+    color: var(--secondColor);
+    font-size: 1.2rem;
+    font-family: var(--parragraphsFont);
+    font-weight: 700;
+    border: 2px solid var(--thirdColor);
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover{
+    background: var(--thirdColor);
+}
