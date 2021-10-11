@@ -15,14 +15,13 @@
 
 body{
     font-family: var(--parragraphsFont);
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 /*GLOBALS*/
 
 h1,h2,h3{
     font-family: var(--headingsFont);
-    text-align: center;
 }
 
 p{
@@ -51,4 +50,47 @@ a{
 
 .btn:hover{
     background: var(--thirdColor);
+}
+
+/*HEADER*/
+
+.nav{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   background: var(--firstColor);
+   height: 5.8rem;
+}
+
+.nav-logo{
+    display: flex;
+    align-items: center;
+}
+
+.nav-img{
+    max-height: 5rem;
+}
+
+.nav-title{
+    color: var(--secondColor);
+    text-transform: uppercase;
+}
+
+.nav-links{
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-li i{
+    color: var(--secondColor);
+    margin: 0.2rem;
+}
+
+.nav-li a{
+    color:var(--secondColor)
 }
