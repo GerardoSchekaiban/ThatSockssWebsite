@@ -59,7 +59,7 @@ a{
    justify-content: space-around;
    align-items: center;
    background: var(--firstColor);
-   height: 5.8rem;
+   height: 15vh;
 }
 
 .nav-logo{
@@ -115,24 +115,32 @@ a{
     body{
         overflow-x: hidden;
     }
+
+    .burguer{
+        display: block;
+        cursor: pointer;
+    }
     
     /*Aside menu*/
     .nav-links{
         position: absolute;
         right: 0;
-        height: 90vh;
-        top: 10vh;
+        height: 92vh;
+        top: 15vh;
         background: var(--firstColor);
         flex-direction: column;
         align-items: center;
         width: 50%;
         /*Not show until click*/
         transform: translateX(100%);
-    
+        transition: all 0.5s ease-in 0s;
     }
 
-    .burguer{
-        display: block;
-        cursor: pointer;
+    .nav-links.active{
+        transform: translateX(0);
     }
+
+    
+
 }
+
