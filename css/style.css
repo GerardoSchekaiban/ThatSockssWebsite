@@ -22,6 +22,7 @@ body{
 
 h1,h2,h3{
     font-family: var(--headingsFont);
+    font-size: 2rem;
 }
 
 p{
@@ -37,19 +38,20 @@ a{
     text-decoration: none;
     outline: none;
     padding: 15px 30px;
-    background: var(--firstColor);
-    color: var(--secondColor);
+    background: var(--secondColor);
+    color: var(--firstColor);
     font-size: 1.2rem;
     font-family: var(--parragraphsFont);
     font-weight: 700;
-    border: 2px solid var(--thirdColor);
+    border: 2px solid var(--firstColor);
     border-radius: 1.5rem;
     cursor: pointer;
     transition: all 0.3s;
 }
 
 .btn:hover{
-    background: var(--thirdColor);
+    background: var(--firstColor);
+    color: var(--secondColor);
 }
 
 /*HEADER*/
@@ -78,8 +80,20 @@ a{
 
 .nav-links{
     display: flex;
-    width: 40%;
+    width: 50%;
     justify-content: space-around;
+}
+
+.nav-li{
+    padding: 7px;
+    border: 2px solid var(--firstColor);
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.nav-li:hover{
+    border: 2px solid var(--secondColor);
+    border-radius: 10px;
 }
 
 .nav-links li{
@@ -95,17 +109,44 @@ a{
     color:var(--secondColor)
 }
 
+
 /*BURGUER ICON*/
 .burguer{
     color: white;
     display: none;
 }
 
+/*HERO*/
+.hero{
+    height: 65vh;
+    background-image: url(/img/hero.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+}
+
+.hero-content{
+    margin: 0 auto;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-title{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-family: var(--parragraphsFont);
+}
 /*RESPONSIVE DESIGN*/
 
 @media screen and (max-width: 1100px) {
     .nav-links{
-        width: 50%;
+        width: 60%;
     }
 }
 
@@ -127,6 +168,7 @@ a{
         right: 0;
         height: 92vh;
         top: 15vh;
+        z-index: 999;
         background: var(--firstColor);
         flex-direction: column;
         align-items: center;
@@ -141,6 +183,17 @@ a{
     }
 
     
+    @media screen and (max-width: 478px){
+        /*Background img fixed (only one leg)*/
+        .hero{
+            background-position-x: right;
+        }
+
+        .hero-content{
+            width: 70%;
+        }
+        
+    }
 
 }
 
