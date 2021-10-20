@@ -118,8 +118,10 @@ a{
 
 /*HERO*/
 .hero{
-    height: 65vh;
-    background-image: url(/img/hero.jpeg);
+    height: 70vh;
+    max-width: 120rem;
+    margin: 0 auto;
+    background-image: url(/img/hero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -142,6 +144,7 @@ a{
     margin-bottom: 1.5rem;
     font-family: var(--parragraphsFont);
 }
+
 /*RESPONSIVE DESIGN*/
 
 @media screen and (max-width: 1100px) {
@@ -182,18 +185,25 @@ a{
         transform: translateX(0);
     }
 
+    /*Background img fixed (horizontal)*/
+    .hero{
+        background-image: url(/img/heroiPad.jpg);
+    } 
+
+    
+
     
     @media screen and (max-width: 478px){
-        /*Background img fixed (only one leg)*/
         .hero{
-            background-position-x: right;
-        }
-
-        .hero-content{
-            width: 70%;
+            background-image: url(/img/heromobile.jpg);
         }
         
-    }
+        .hero-content{
+            width: 70%;
+        } 
+        
+    } 
 
 }
+
 
