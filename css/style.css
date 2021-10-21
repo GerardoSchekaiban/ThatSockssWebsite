@@ -27,7 +27,6 @@ h1,h2,h3{
 
 p{
     font-size: 2.5rem;
-    text-align: center;
 }
 
 a{
@@ -35,7 +34,6 @@ a{
 }
 
 .btn{
-    text-decoration: none;
     outline: none;
     padding: 15px 30px;
     background: var(--secondColor);
@@ -52,6 +50,18 @@ a{
 .btn:hover{
     background: var(--firstColor);
     color: var(--secondColor);
+}
+
+.buy{
+    background: var(--firstColor);
+    color: var(--secondColor);
+    border-radius: 0;
+    padding: 8px 15px;
+}
+
+.buy:hover{
+    border: 2px solid var(--thirdColor);
+    background: var(--thirdColor);
 }
 
 /*HEADER*/
@@ -143,6 +153,60 @@ a{
     text-transform: uppercase;
     margin-bottom: 1.5rem;
     font-family: var(--parragraphsFont);
+}
+
+/*BEST SELLERS*/
+.products{
+    margin: 0 auto;
+    height: 50rem;
+    max-width: 120rem;
+}
+
+.products h1{
+    text-align: center;
+    color: black;
+}
+
+.products-grid{
+    width: 95%;
+    height: 85%;
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    
+}
+
+.product{
+    background: rgb(243, 239, 239);
+    max-width: 17rem;
+    height: 23rem;
+    text-align: center;
+}
+
+.product p{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.product-image{
+    width: 80%;
+    height: 60%;
+    margin-top: 0.5rem;
+}
+
+.product-info{
+    text-align: left;
+    margin: 0.5rem;
+}
+
+.product-info del{
+    font-size: 1rem;
+}
+
+.product-info button{
+    margin-left: 3rem;
 }
 
 /*RESPONSIVE DESIGN*/
