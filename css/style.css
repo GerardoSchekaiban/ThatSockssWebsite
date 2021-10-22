@@ -71,7 +71,7 @@ a{
    justify-content: space-around;
    align-items: center;
    background: var(--firstColor);
-   height: 15vh;
+   min-height: 15vh;
 }
 
 .nav-logo{
@@ -158,8 +158,8 @@ a{
 /*BEST SELLERS*/
 .products{
     margin: 0 auto;
-    height: 50rem;
-    max-width: 120rem;
+    height: 60rem;
+    max-width: 85rem;
 }
 
 .products h1{
@@ -174,7 +174,7 @@ a{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 4rem;
     
 }
 
@@ -253,21 +253,63 @@ a{
     .hero{
         background-image: url(/img/heroiPad.jpg);
     } 
-
-    
-
-    
-    @media screen and (max-width: 478px){
-        .hero{
-            background-image: url(/img/heromobile.jpg);
-        }
-        
-        .hero-content{
-            width: 70%;
-        } 
-        
-    } 
-
+ 
 }
 
+@media screen and (max-width: 1275px){
+    /*Best Sellers Grid fit (iPad) */
+    .products-grid{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
 
+    .product-info button{
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 750px){
+    /*Best Sellers Grid fit (iPhone) */
+    .products-grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .product-info button{
+        margin-left: 1rem;
+    }
+
+    .product-image{
+        height: 12rem;
+    }
+    
+    .product{
+        height: 24rem;
+    }
+
+    .product-info button{
+        display: block;
+        text-align: left;
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 300px){
+     /*Best Sellers Grid fit (mini phone) */
+    .products-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+    
+@media screen and (max-width: 478px){
+    /*Background img fit (horizontal)*/
+    .hero{
+        background-image: url(/img/heromobile.jpg);
+    }
+        
+    .hero-content{
+            width: 70%;
+    } 
+        
+} 
