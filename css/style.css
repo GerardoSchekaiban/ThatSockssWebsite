@@ -209,6 +209,38 @@ a{
     margin-left: 3rem;
 }
 
+/*ABOUT US*/
+
+.about{
+    height: 35rem;
+    margin: 4rem 0;
+}
+
+.about-container{
+    margin: 0 auto;
+    max-width: 90rem;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-image img{
+    width: 25rem;
+    box-shadow: -30px -30px 10px var(--firstColor);
+}
+
+.about-info{
+    width: 50%;
+}
+
+.about-info h2{
+    text-transform: uppercase;
+}
+
+.about-info p{
+    font-size: 1.8rem;
+}
 /*RESPONSIVE DESIGN*/
 
 @media screen and (max-width: 1100px) {
@@ -258,6 +290,11 @@ a{
 
 @media screen and (max-width: 1275px){
     /*Best Sellers Grid fit (iPad) */
+
+    .products{
+        margin-top: 2rem;
+    }
+
     .products-grid{
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
@@ -266,10 +303,22 @@ a{
     .product-info button{
         margin-left: 1rem;
     }
+
+    /*About us fit (iPad) */
+    .about-container{
+        flex-direction: column;
+        margin-top: 25rem;
+    }
+
+    .about-info{
+        margin-top: 3rem;
+        width: 90%;
+    }
+
 }
 
 @media screen and (max-width: 750px){
-    /*Best Sellers Grid fit (iPhone) */
+    /*Best Sellers Grid fit (iPhone)*/ 
     .products-grid{
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
@@ -293,12 +342,35 @@ a{
         margin-left: 0;
         margin-top: 0.5rem;
     }
+
+    /*About us fit (iPhone) */
+    .about-container{
+        margin-top: 50rem;
+    }
+
+    .about-info{
+        width: 95%;
+    }
+
+    .about-image img{
+        width: 17rem;
+    }
+    
 }
 
 @media screen and (max-width: 300px){
-     /*Best Sellers Grid fit (mini phone) */
+     /*Best Sellers Grid fit (mini phone)*/
     .products-grid{
         grid-template-columns: repeat(1, 1fr);
+    }
+
+     /*About us fit (iPhone) */
+     .about-container{
+        margin-top: 150rem;
+    }
+
+    .about-image img{
+        width: 12rem;
     }
 }
     
