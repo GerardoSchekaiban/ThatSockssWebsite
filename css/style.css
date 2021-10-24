@@ -164,6 +164,7 @@ a{
 
 .products h1{
     text-align: center;
+    text-transform: uppercase;
     color: black;
 }
 
@@ -241,6 +242,32 @@ a{
 .about-info p{
     font-size: 1.8rem;
 }
+
+/*GALLERY*/
+
+.gallery{
+    height: 25rem;
+    max-width: 90rem;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.gallery h2{
+    text-align: center;
+}
+
+.gallery-images{
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+.gallery-images img{
+    height: 100px;
+    object-fit: cover;
+}
+
 /*RESPONSIVE DESIGN*/
 
 @media screen and (max-width: 1100px) {
