@@ -248,27 +248,68 @@ a{
 .gallery{
     height: 25rem;
     max-width: 90rem;
-    width: 95%;
     margin: 0 auto;
 }
 
 .gallery h2{
     text-align: center;
+    text-transform: uppercase;
 }
 
 .gallery-images{
-    margin-top: 2.5rem;
+    width: 95%;
+    margin: 2.5rem auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
+    text-align: center;
 }
 
 .gallery-images img{
+    width: 185px;
     height: 100px;
     object-fit: cover;
 }
 
 /*RESPONSIVE DESIGN*/
+
+@media screen and (max-width: 1275px){
+    /*Best Sellers Grid fit (iPad) */
+
+    .products{
+        margin-top: 2rem;
+    }
+
+    .products-grid{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .product-info button{
+        margin-left: 1rem;
+    }
+
+    /*About us fit (iPad) */
+    .about-container{
+        flex-direction: column;
+        margin-top: 25rem;
+    }
+
+    .about-info{
+        margin-top: 3rem;
+        width: 90%;
+    }
+
+    /*Gallery Grid fit (4 columns) */
+    .gallery{
+        margin-top: 30rem;
+    }
+
+    .gallery-images{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
 
 @media screen and (max-width: 1100px) {
     .nav-links{
@@ -312,36 +353,12 @@ a{
     .hero{
         background-image: url(/img/heroiPad.jpg);
     } 
- 
-}
 
-@media screen and (max-width: 1275px){
-    /*Best Sellers Grid fit (iPad) */
-
-    .products{
-        margin-top: 2rem;
-    }
-
-    .products-grid{
+    /*Gallery Grid fit (3 columns) */
+    .gallery-images{
         grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
     }
-
-    .product-info button{
-        margin-left: 1rem;
-    }
-
-    /*About us fit (iPad) */
-    .about-container{
-        flex-direction: column;
-        margin-top: 25rem;
-    }
-
-    .about-info{
-        margin-top: 3rem;
-        width: 90%;
-    }
-
+ 
 }
 
 @media screen and (max-width: 750px){
@@ -382,23 +399,12 @@ a{
     .about-image img{
         width: 17rem;
     }
+
+    /*Gallery Grid fit (2 columns) */
+    .gallery-images{
+        grid-template-columns: repeat(2, 1fr);
+    }
     
-}
-
-@media screen and (max-width: 300px){
-     /*Best Sellers Grid fit (mini phone)*/
-    .products-grid{
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-     /*About us fit (iPhone) */
-     .about-container{
-        margin-top: 150rem;
-    }
-
-    .about-image img{
-        width: 12rem;
-    }
 }
     
 @media screen and (max-width: 478px){
@@ -410,5 +416,40 @@ a{
     .hero-content{
             width: 70%;
     } 
-        
+
+    /*Gallery Grid fit (image width) */
+    .gallery{
+        margin-top: 38rem;
+    }
+
+    .gallery-images img{
+        width: 150px;
+        object-fit: cover;
+    }
 } 
+
+@media screen and (max-width: 300px){
+    /*Best Sellers Grid fit (mini phone)*/
+   .products-grid{
+       grid-template-columns: repeat(1, 1fr);
+   }
+
+    /*About us fit (iPhone) */
+    .about-container{
+       margin-top: 150rem;
+   }
+
+   .about-image img{
+       width: 12rem;
+   }
+
+   /*Gallery Grid fit (1 column) */
+
+   .gallery-images{
+       grid-template-columns: repeat(1, 1fr);
+    }
+
+    .gallery{
+        margin-top: 45rem;
+    }
+}
