@@ -64,6 +64,10 @@ a{
     background: var(--thirdColor);
 }
 
+.fixed{
+    overflow: hidden;
+}
+
 /*HEADER*/
 
 .nav{
@@ -266,9 +270,25 @@ a{
 }
 
 .gallery-images img{
-    width: 185px;
-    height: 100px;
     object-fit: cover;
+    cursor: pointer;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: grid;
+    place-items: center;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.overlay i{
+    font-size: 2rem;
+    color: var(--secondColor);
+    cursor: pointer;
 }
 
 /*RESPONSIVE DESIGN*/
@@ -289,7 +309,7 @@ a{
         margin-left: 1rem;
     }
 
-    /*About us fit (iPad) */
+    /*About us fit (iPad)*/
     .about-container{
         flex-direction: column;
         margin-top: 25rem;
@@ -299,6 +319,7 @@ a{
         margin-top: 3rem;
         width: 90%;
     }
+
 
     /*Gallery Grid fit (4 columns) */
     .gallery{
@@ -387,7 +408,7 @@ a{
         margin-top: 0.5rem;
     }
 
-    /*About us fit (iPhone) */
+    /*About us fit (iPhone) 
     .about-container{
         margin-top: 50rem;
     }
@@ -399,7 +420,7 @@ a{
     .about-image img{
         width: 17rem;
     }
-
+*/
     /*Gallery Grid fit (2 columns) */
     .gallery-images{
         grid-template-columns: repeat(2, 1fr);
@@ -426,6 +447,11 @@ a{
         width: 150px;
         object-fit: cover;
     }
+
+    /*Image overlay fit (width) */
+    .overlay img{
+        width: 300px;
+    }
 } 
 
 @media screen and (max-width: 300px){
@@ -434,7 +460,7 @@ a{
        grid-template-columns: repeat(1, 1fr);
    }
 
-    /*About us fit (iPhone) */
+    /*About us fit (iPhone) 
     .about-container{
        margin-top: 150rem;
    }
@@ -442,6 +468,8 @@ a{
    .about-image img{
        width: 12rem;
    }
+
+   */
 
    /*Gallery Grid fit (1 column) */
 
