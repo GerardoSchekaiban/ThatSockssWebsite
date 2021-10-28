@@ -17,7 +17,7 @@
 </head>
 <body>
     <!--HEADER-->
-    <nav class="nav">
+    <nav id="home" class="nav">
         <a href="">
             <div class="nav-logo">
                 <img class="nav-img" src="./img/logo.jpg" alt="logo">
@@ -25,10 +25,10 @@
             </div>
         </a>
         <ul class="nav-links">
-            <li class="nav-li"><a href=""><i class="fas fa-socks"></i>Home</a></li>
-            <li class="nav-li"><a href=""><i class="fas fa-socks"></i>Best Sellers</a></li>
-            <li class="nav-li"><a href=""><i class="fas fa-socks"></i>About Us</a></li>
-            <li class="nav-li"><a href=""><i class="fas fa-socks"></i>Gallery</a></li> 
+            <li class="nav-li"><a href="#home"><i class="fas fa-socks"></i>Home</a></li>
+            <li class="nav-li"><a href="#bestsellers"><i class="fas fa-socks"></i>Best Sellers</a></li>
+            <li class="nav-li"><a href="#aboutus"><i class="fas fa-socks"></i>About Us</a></li>
+            <li class="nav-li"><a href="#gallery"><i class="fas fa-socks"></i>Gallery</a></li> 
         </ul>
 
         <!--BURGUER ICON-->
@@ -46,7 +46,7 @@
     </main> 
 
     <!--BEST SELLERS-->
-    <section class="products">
+    <section id="bestsellers" class="products">
         <h1>Best Sellers</h1>
         <div class="products-grid">
             <div class="product">
@@ -132,7 +132,7 @@
     </section>
 
     <!--ABOUT US-->
-    <section class="about">
+    <section id="aboutus" class="about">
         <div class="about-container">
             <div class="about-image">
                 <img src="./img/founders.jpg" alt="socks stand">
@@ -151,12 +151,18 @@
 
 
     <!--GALLERY-->
-    <section class="gallery">
+    <section id="gallery" class="gallery">
         <h2>Gallery</h2>
         <ul class="gallery-images"></ul>
     </section>
-    
 
+
+     <!--FOOTER-->
+     <footer>
+         ThatSockss Website - All rights reserved - By Gerardo Schekaibán
+     </footer>
+    
+    
     <!--JAVASCRIPT-->
     <script src="./js/app.js"></script>
     
