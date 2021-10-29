@@ -68,6 +68,10 @@ a{
     overflow: hidden;
 }
 
+.body-scroll{
+    padding-top: 14vh;
+}
+
 /*HEADER*/
 
 .nav{
@@ -75,7 +79,7 @@ a{
    justify-content: space-around;
    align-items: center;
    background: var(--firstColor);
-   min-height: 15vh;
+   min-height: 14vh;
 }
 
 .nav-logo{
@@ -84,7 +88,7 @@ a{
 }
 
 .nav-img{
-    max-height: 5rem;
+    max-height: 4.5rem;
 }
 
 .nav-title{
@@ -101,13 +105,13 @@ a{
 .nav-li{
     padding: 7px;
     border: 2px solid var(--firstColor);
-    border-radius: 10px;
+    border-radius: 15px;
     transition: all 0.3s;
 }
 
 .nav-li:hover{
-    border: 1px solid var(--secondColor);
-    border-radius: 10px;
+    border: 1.5px solid var(--secondColor);
+    border-radius: 12px;
 }
 
 .nav-links li{
@@ -121,6 +125,18 @@ a{
 
 .nav-li a{
     color:var(--secondColor)
+}
+
+.nav-fixed{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: 0rem 0.2rem 0rem var(--secondColor);
+}
+
+.nav-opacity{
+    opacity: 0.85;
 }
 
 
@@ -233,6 +249,11 @@ a{
 .about-image img{
     width: 25rem;
     box-shadow: -30px -30px 10px var(--firstColor);
+    transition: all 0.3s;
+}
+
+.about-image img:hover{
+    transform: translateY(20px);
 }
 
 .about-info{
@@ -272,6 +293,11 @@ a{
 .gallery-images img{
     object-fit: cover;
     cursor: pointer;
+    transition: all 0.3s;
+}
+
+.gallery-images img:hover{
+    width: 200px;
 }
 
 .overlay{
@@ -368,7 +394,7 @@ footer{
         position: absolute;
         right: 0;
         height: 92vh;
-        top: 15vh;
+        top: 14vh;
         z-index: 999;
         background: var(--firstColor);
         flex-direction: column;

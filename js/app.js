@@ -1,5 +1,5 @@
 
-const navSlide = () => {
+function navSlide(){
     const burguer = document.querySelector(".burguer");
     const nav = document.querySelector(".nav-links");
     const body = document.querySelector('body');
@@ -8,6 +8,25 @@ const navSlide = () => {
         nav.classList.toggle("active");
         //Don't allow scroll when menu is viewing
         body.classList.toggle('fixed');
+    });
+}
+
+function navFixed(){
+    const nav = document.querySelector('.nav');
+    const bestSellers = document.querySelector('.products');
+    const body = document.querySelector('body');
+
+    window.addEventListener('scroll', function(){
+        //When best sellers section top touch window top
+        if(bestSellers.getBoundingClientRect().top<0){
+            nav.classList.add('nav-fixed');
+            nav.classList.add('nav-opacity');
+            body.classList.add('body-scroll');
+        }else{
+            nav.classList.remove('nav-fixed');
+            nav.classList.remove('nav-opacity');
+            body.classList.remove('body-scroll');
+        }
     });
 }
 
@@ -92,14 +111,13 @@ function ScrollNav(){
 
             //Close menu after link is clicked
             const nav = document.querySelector(".nav-links");
-            nav.classList.remove("active");
-            
-            
+            nav.classList.remove("active");   
         })
     })
 }
 
 
 navSlide();
+navFixed();
 createGallery();
 ScrollNav();
