@@ -164,7 +164,7 @@ a{
     height: 70vh;
     max-width: 120rem;
     margin: 0 auto;
-    background-image: url(./img/hero.jpg);
+    background-image: url(https://i.ibb.co/VJCC3VH/hero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -429,7 +429,7 @@ footer{
 
     /*Background img fixed (horizontal)*/
     .hero{
-        background-image: url(/img/heroiPad.jpg);
+        background-image: url(https://i.ibb.co/C86ZgTV/heroiPad.jpg);
     } 
 
     /*Gallery Grid fit (3 columns) */
@@ -498,7 +498,7 @@ footer{
 @media screen and (max-width: 478px){
     /*Background img fit (horizontal)*/
     .hero{
-        background-image: url(/img/heromobile.jpg);
+        background-image: url(https://i.ibb.co/NmvZwyX/heromobile.jpg);
     }
         
     .hero-content{
