@@ -164,7 +164,7 @@ a{
     height: 70vh;
     max-width: 120rem;
     margin: 0 auto;
-    background-image: url(/img/hero.jpg);
+    background-image: url(./img/hero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -311,8 +311,10 @@ a{
     transition: all 0.3s;
 }
 
-.gallery-images img:hover{
-    width: 200px;
+@media screen and (min-width: 1000px){
+    .gallery-images img:hover{
+        width: 200px;
+    }
 }
 
 .overlay{
