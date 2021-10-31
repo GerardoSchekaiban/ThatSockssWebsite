@@ -13,6 +13,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: var(--parragraphsFont);
     font-size: 1.5rem;
@@ -80,11 +84,14 @@ a{
    align-items: center;
    background: var(--firstColor);
    min-height: 14vh;
+   position: relative;
+   z-index: 100;
 }
 
 .nav-logo{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .nav-img{
@@ -144,7 +151,13 @@ a{
 .burguer{
     color: white;
     display: none;
+    transition: all 0.5s;
 }
+
+.rotate{
+    transform: rotate(90deg);
+}
+
 
 /*HERO*/
 .hero{
@@ -174,6 +187,8 @@ a{
     margin-bottom: 1.5rem;
     font-family: var(--parragraphsFont);
 }
+
+
 
 /*BEST SELLERS*/
 .products{
@@ -306,6 +321,7 @@ a{
     right: 0;
     left: 0;
     bottom: 0;
+    z-index: 200;
     display: grid;
     place-items: center;
     background: rgba(0, 0, 0, 0.8);

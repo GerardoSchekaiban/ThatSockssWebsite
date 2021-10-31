@@ -6,6 +6,7 @@ function navSlide(){
     //When hamburguer icon click
     burguer.addEventListener("click", () => {
         nav.classList.toggle("active");
+        burguer.classList.toggle("rotate");
         //Don't allow scroll when menu is viewing
         body.classList.toggle('fixed');
     });
@@ -91,13 +92,17 @@ function showImage(id) {
 }
 
 function ScrollNav(){
+    //Logo click
+    const logo = document.querySelector('.nav-logo');
+    logo.addEventListener("click", function(){
+        window.scrollTo(0,0)
+    })
+
     //Links
     const links = document.querySelectorAll('.nav-links a');
     //For each link
     links.forEach(link => {
         link.addEventListener('click', function(e){
-            //Remove default behavior
-            e.preventDefault();
 
             //Link section clicked
             const linkClicked = e.target.attributes.href.value;
@@ -111,11 +116,15 @@ function ScrollNav(){
 
             //Close menu after link is clicked
             const nav = document.querySelector(".nav-links");
-            nav.classList.remove("active");   
+            nav.classList.remove("active");  
+
+            const burguer = document.querySelector(".burguer");
+            burguer.classList.remove("rotate");
+            
         })
     })
+    
 }
-
 
 navSlide();
 navFixed();
