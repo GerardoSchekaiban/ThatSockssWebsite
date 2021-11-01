@@ -3,12 +3,13 @@ function navSlide(){
     const burguer = document.querySelector(".burguer");
     const nav = document.querySelector(".nav-links");
     const body = document.querySelector('body');
+    const html = document.querySelector('html');
     //When hamburguer icon click
     burguer.addEventListener("click", () => {
         nav.classList.toggle("active");
         burguer.classList.toggle("rotate");
         //Don't allow scroll when menu is viewing
-        body.classList.toggle('fixed');
+        html.classList.toggle('fixed');
     });
 }
 
@@ -78,8 +79,8 @@ function showImage(id) {
 
     closeOverlay.addEventListener("click", () => {
         //Allow scroll when image isn't viewing
-        const body = document.querySelector('body');
-        body.classList.remove('fixed');
+        const html = document.querySelector('html');
+        html.classList.remove('fixed');
         //Remove overlay when close button is clicked
         overlay.remove();
     });
@@ -88,7 +89,8 @@ function showImage(id) {
     const body = document.querySelector('body');
     body.appendChild(overlay);
      //Don't allow scroll when image viewing
-    body.classList.add('fixed');
+    const html = document.querySelector('html');
+    html.classList.add('fixed');
 }
 
 function ScrollNav(){
@@ -111,8 +113,8 @@ function ScrollNav(){
             section.scrollIntoView({behavior: "smooth"});
 
             //Allow scroll after link is clicked
-            const body = document.querySelector('body');
-            body.classList.remove('fixed');
+            const html = document.querySelector('html');
+            html.classList.remove('fixed');
 
             //Close menu after link is clicked
             const nav = document.querySelector(".nav-links");
